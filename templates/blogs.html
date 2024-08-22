@@ -7,27 +7,18 @@
     <link rel="stylesheet" href="{%static 'blog/style.css'%}">
 </head>
 <body>
+{%for blog in blogs%}
 <div class="blog-wrapper">
   <div class="blog-card">
     <div class="card-img"><img>
-      <h2>{{blogs.title}}</h2>
+      <h2>{{blog.title}}</h2>
     </div>
     <div class="card-details"><span><i class="fa fa-calendar"></i></span><span><i class="fa fa-heart"></i></span></div>
-    <div class="card-text"><p>{{blogs.body}}</p></div>
+    <div class="card-text"><p>{{blog.body}}</p></div>
     <div class="read-more">Read More</div>
   </div>
 </div>
-
-<div class="blog-wrapper">
-  <div class="blog-card">
-    <div class="card-img"><img>
-      <h2>{{}}</h2>
-    </div>
-    <div class="card-details"><span><i class="fa fa-calendar"></i></span><span><i class="fa fa-heart"></i></span></div>
-    <div class="card-text"><p>{{}}</p></div>
-    <div class="read-more">Read More</div>
-  </div>
-</div>
+{% endfor %}
 </body>
 </html>
 
